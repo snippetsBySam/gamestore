@@ -1,0 +1,56 @@
+@GameStore.Api_HostAddress = http://localhost:5085
+
+GET {{GameStore.Api_HostAddress}}/api/games
+Accept: application/json
+
+###
+GET {{GameStore.Api_HostAddress}}/api/games/4
+
+###
+POST {{GameStore.Api_HostAddress}}/api/games
+Content-Type: application/json
+
+{
+  "name": "Minecraft",
+  "genreId": 5,
+  "price": "19.99",
+  "releaseDate": "2011-11-18"
+}
+
+###
+POST {{GameStore.Api_HostAddress}}/api/games
+Content-Type: application/json
+
+{
+  "name": "Street Fighter II",
+  "genreId": 1,
+  "price": 9.99,
+  "releaseDate": "1991-02-01"
+}
+
+###
+POST {{GameStore.Api_HostAddress}}/api/games
+Content-Type: application/json
+
+{
+  "name": "Final Fantasy XIV",
+  "genreId": 2,
+  "price": 59.99,
+  "releaseDate": "2010-09-30"
+}
+
+###
+PUT {{GameStore.Api_HostAddress}}/api/games/3
+Content-Type: application/json
+
+{
+  "name": "Street Fighter II Turbo",
+  "genreId": 1,
+  "price": 19.99,
+  "releaseDate": "1991-02-01"
+}
+
+
+
+###
+DELETE {{GameStore.Api_HostAddress}}/api/games/6
